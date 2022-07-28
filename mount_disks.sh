@@ -30,7 +30,8 @@ links https://www.gentoo.org/downloads/mirrors/
 
 echo "Input any key to proceed... (press enter)";
 read u
-echo ""
+echo "What is the name of the stage3 file? (write 'stage' then press tab)";
+read stagename
 echo "Unpacking stage3...";
-tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner;
-
+tar xpvf $stagename --xattrs-include='*.*' --numeric-owner;
+echo "Done!";
