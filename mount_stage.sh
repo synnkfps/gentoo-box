@@ -25,4 +25,4 @@ echo "Done! ";
 # to do: portage make.conf 
 
 mirrorselect -i -o >> /mnt/gentoo/etc/portage/make.conf;
-echo "Thank you! boot.sh ";
+echo "Thank you! Run mount_boot.sh tô proceed";
