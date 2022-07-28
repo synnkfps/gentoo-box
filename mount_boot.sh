@@ -17,5 +17,17 @@ chroot /mnt/gentoo /bin/bash;
 source /etc/profile;
 export PS1="(chroot) ${PS1}";
 
-echo "Mount
-mount /dev/sda1 /boot
+echo "Mount boot";
+mount /dev/sda1 /boot;
+
+echo "Synchronizing rsync";
+emerge-webrsync;
+emerge --sync;
+
+echo "Done! Select a profile...";
+eselect profile list;
+
+echo "Which profile did you choose?";
+read profile
+eselect profile set $(profile);
+echo "Done! Run emerge.sh";
